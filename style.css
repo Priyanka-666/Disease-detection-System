@@ -1,0 +1,635 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #0d6efd;
+  --primary-dark: #0a58ca;
+  --secondary: #198754;
+  --bg: #f4f7fb;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-muted: #555;
+  --border: #e0e6ed;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border: #334155;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ========== PAGES ========== */
+.page {
+  display: none;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.page.active {
+  display: block;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* College Logos */
+.college-logo {
+  max-width: 260px;
+  max-height: 85px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+.apsche-logo {
+  max-width: 110px;      /* APSCHE logo is more square/circular */
+  max-height: 110px;
+}
+
+.logo-box p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  text-align: center;
+}
+/* ========== WELCOME SCREEN ========== */
+#welcome {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+  padding: 20px;
+}
+
+body.dark #welcome {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+#welcome.active {
+  display: flex;
+}
+
+.welcome-container {
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 40px 32px;
+  max-width: 720px;
+  width: 100%;
+  text-align: center;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.logo-box {
+  text-align: center;
+}
+
+.logo-placeholder {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0d6efd, #198754);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 auto 8px;
+}
+
+.logo-placeholder.apsche {
+  background: linear-gradient(135deg, #dc3545, #fd7e14);
+}
+
+.logo-box p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.main-title {
+  font-size: 1.35rem;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.csp-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-name {
+  font-size: 1.6rem;
+  color: var(--secondary);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+}
+
+.team-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.team-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.team-card h4 {
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.team-card ol {
+  padding-left: 20px;
+  font-size: 0.9rem;
+}
+
+.team-card ol li {
+  margin-bottom: 4px;
+}
+
+.mentor-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.mentor-desig,
+.year {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+/* Home button next to brand */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.home-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background 0.2s;
+}
+
+.home-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Navigation Logo */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: px;
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.nav-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* ========== NAVIGATION ========== */
+#main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+#main-nav.hidden {
+  display: none;
+}
+
+.nav-brand {
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.nav-links a:hover {
+  background: var(--bg);
+  color: var(--primary);
+}
+
+.theme-btn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* ========== PAGE CONTENT ========== */
+.page-header {
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--primary);
+}
+
+.page-header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.page-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin: 16px 0 8px;
+  color: var(--secondary);
+}
+
+.card p {
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.info-list {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.info-list li {
+  margin-bottom: 8px;
+}
+
+.card.highlight {
+  border-left: 4px solid var(--secondary);
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 12px;
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.stat-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-num {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.stat-box strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stat-box p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Two column */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.two-col ul {
+  padding-left: 18px;
+  margin-top: 8px;
+}
+
+.two-col li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* Field Videos */
+.field-video {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 12px auto;
+  background: #000;
+  box-shadow: var(--shadow);
+}
+
+.video-card h3 {
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.img-caption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Campus Image */
+.campus-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 12px;
+  box-shadow: var(--shadow);
+}
+
+.img-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: var(--bg);
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.btn.primary:hover {
+  background: var(--primary-dark);
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+#main-footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  background: var(--card-bg);
+}
+
+#main-footer.hidden {
+  display: none;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .team-section {
+    grid-template-columns: 1fr;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-container {
+    padding: 28px 18px;
+  }
+
+  .project-name {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    gap: 4px;
+  }
+
+  .nav-links a {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
+
+  #main-nav {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .logo-placeholder {
+    width: 70px;
+    height: 70px;
+    font-size: 0.95rem;
+  }
+
+  .main-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Disease Cards with Images */
+.disease-card {
+  padding: 20px;
+}
+
+.disease-content {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.disease-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.disease-text h3 {
+  margin-top: 0;
+  color: var(--secondary);
+}
+
+.disease-text ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.disease-text li {
+  margin-bottom: 5px;
+}
+
+.disease-image {
+  flex: 0 0 280px;
+  text-align: center;
+}
+
+.disease-image img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.img-caption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .disease-content {
+    flex-direction: column;
+  }
+
+  .disease-image {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .disease-image img {
+    max-width: 100%;
+  }
+}

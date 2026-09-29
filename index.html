@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disease Detection  System For Aquaculture | CSP Project</title>
+  <link rel="icon" href="aqua-icon.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== WELCOME / HOME SCREEN ========== -->
+  <section id="welcome" class="page active">
+    <div class="welcome-container">
+      <div class="logo-row">
+        <!-- RCE logo -->
+        <div class="logo-box">
+         <img src="rce-logo.png.jpeg" alt="Ramachandra College of Engineering" class="college-logo">
+          <p>Ramachandra Collage of Engineering</p>
+        </div>
+        <div class="logo-box">
+          <img src="rce-logo.jpg" alt="Andhra Pradesh State Council of Higher Education" class="college-logo apsche-logo">
+          <p>APSCHE</p>
+        </div>
+      </div>
+
+      <h1 class="main-title">Department of Computer Science &amp; Engineering</h1>
+      <h2 class="csp-title">Community Service Project (CSP)</h2>
+      <h3 class="project-name">Disease Detection  System For Aquaculture </h3>
+      <p class="subtitle">A Study on Prawn  Cultivation </p>
+
+      <div class="team-section">
+        <div class="team-card">
+          <h4>Team Members</h4>
+          <ol>
+            <li>Bale Priyanka – (24ME1A05D6)</li>
+            <li>Chodavarapu Sathwika– (24ME1A05E8)</li>
+            <li>Kulumatla GnanendraKumar – (24ME1A05G5)</li>
+            <li>Bukya Naga Kishore – (24ME1A05D9)</li>
+          </ol>
+        </div>
+        <div class="team-card">
+          <h4>Mentor</h4>
+          <p class="mentor-name">Mr.K.Gopala Reddy</p>
+          <p class="mentor-desig">Assistant Professor</p>
+          <p class="year">Academic Year: 2025 – 2026</p>
+        </div>
+      </div>
+
+      <button class="btn primary" onclick="showPage('page1')">Enter Project →</button>
+    </div>
+  </section>
+
+<!-- ========== NAVIGATION (shown after welcome) ========== -->
+<nav id="main-nav" class="hidden">
+  <div class="nav-brand">
+    <img src="aqua-logo.jpg" alt="Aquaculture Logo" class="nav-logo">
+    <span>CSP – Aquaculture</span>
+    <button class="home-btn" onclick="showPage('welcome')">Home</button>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('page1'); return false;">Overview</a></li>
+    <li><a href="#" onclick="showPage('page2'); return false;">Food Security</a></li>
+    <li><a href="#" onclick="showPage('page3'); return false;">Cultivation</a></li>
+    <li><a href="#" onclick="showPage('page4'); return false;">Diseases</a></li>
+    <li><a href="#" onclick="showPage('page5'); return false;">About RCE</a></li>
+  </ul>
+
+  <button class="theme-btn" id="themeToggle" onclick="toggleTheme()">🌙 Dark</button>
+</nav>
+  <!-- ========== PAGE 1 ========== -->
+  <section id="page1" class="page">
+    <div class="container">
+      <header class="page-header">
+        <h1>Page 1 – Project Overview</h1>
+        <p>CSP Name • Purpose • Village Details • Importance</p>
+      </header>
+
+      <div class="card">
+        <h2>CSP Name &amp; Purpose</h2>
+        <p><strong>Project Title:</strong> Disease Detection  System For Aquaculture – A Study on Prawn and Fish Cultivation in Selected Village</p>
+        <p><strong>Purpose:</strong> To study how aquaculture (especially prawn farming) contributes to food security, generates rural income, and supports nutritional needs of the community. The project aims to document cultivation practices, challenges (diseases), and benefits of prawns for human health.</p>
+      </div>
+
+      <div class="card">
+        <h2>Selected Village – Demographic Details</h2>
+        <ul class="info-list">
+          <li><strong>Village Name:</strong> Sreeparu</li>
+          <li><strong>District / State:</strong> Eluru/ Andhra Pradesh</li>
+          <li><strong>Total Population:</strong> ≈ 4,500 – 6,000</li>
+          <li><strong>Number of Households:</strong> ≈ 1,100 – 1,400</li>
+          <li><strong>Literacy Rate:</strong> ≈ 40% – 60%</li>
+          <li><strong>Main Occupation:</strong> Agriculture + Aquaculture (Prawn farming)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Major Income of the Selected Village</h2>
+        <p>The primary source of income in the selected village is <strong>aquaculture (prawn and fish cultivation)</strong>, followed by traditional agriculture (paddy, coconut) and daily wage labour.</p>
+        <ul class="info-list">
+          <li>Prawn farming contributes the largest share of cash income for many families.</li>
+          <li>Export-oriented vannamei prawn cultivation provides higher returns than traditional crops.</li>
+          <li>Seasonal employment is generated during stocking, feeding, and harvesting.</li>
+        </ul>
+      </div>
+
+      <div class="card highlight">
+        <h2>Importance of the Project</h2>
+        <ul class="info-list">
+          <li>Highlights the role of aquaculture in achieving <strong>food and nutritional security</strong>.</li>
+          <li>Documents local practices so that students and farmers can learn sustainable methods.</li>
+          <li>Creates awareness about common diseases and precautionary measures.</li>
+          <li>Supports the goals of community service by linking technology education with rural livelihood.</li>
+          <li>Encourages students to understand real-world applications of data collection and presentation.</li>
+        </ul>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn" onclick="showPage('welcome')">← Home</button>
+        <button class="btn primary" onclick="showPage('page2')"> Food Security→</button>
+      </div>
+    </div>
+  </section>
+
+<!-- ========== PAGE 2 ========== -->
+<section id="page2" class="page">
+  <div class="container">
+    <header class="page-header">
+      <h1>Page 2 – Food Security through Aquaculture</h1>
+      <p>Global context • Major countries • Benefits of prawns • Field Videos</p>
+    </header>
+
+    <!-- Existing content -->
+    <div class="card">
+      <h2>Percentage of Food Security in the World</h2>
+      <p>Aquaculture (farming of prawns and other aquatic organisms) is one of the fastest-growing food production sectors and plays a critical role in global food security.</p>
+      <ul class="info-list">
+        <li>Aquaculture now supplies <strong>more than 50%</strong> of the seafood consumed worldwide.</li>
+        <li>Blue foods provide nearly <strong>20% of global animal protein</strong>.</li>
+        <li>In many developing countries, fish and prawns are the most affordable source of high-quality protein.</li>
+        <li>Global aquaculture production exceeded <strong>130 million tonnes</strong> in recent years.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Countries with Major Aquaculture Cultivation</h2>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-num">1</span>
+          <strong>China</strong>
+          <p>Largest producer (~57%)</p>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">2</span>
+          <strong>Indonesia</strong>
+          <p>Second largest</p>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">3</span>
+          <strong>India</strong>
+          <p>3rd largest & major prawn exporter</p>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">4</span>
+          <strong>Vietnam</strong>
+          <p>Important shrimp producer</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== FIELD VIDEOS SECTION ========== -->
+    <div class="card">
+      <h2>Field Videos from the Village</h2>
+      <p>Real videos captured during the field visit related to prawn cultivation practices.</p>
+    </div>
+
+    <!-- Video 1 -->
+    <div class="card video-card">
+      <h3>1. Feeding Prawns from Floating Raft</h3>
+      <video controls muted playsinline class="field-video">
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="img-caption">Worker feeding prawns using a floating platform in the pond</p>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="card video-card">
+      <h3>2. Pond Maintenance & Netting Work</h3>
+      <video controls muted playsinline class="field-video">
+        <source src="video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="img-caption">Cleaning, netting and daily maintenance activities in the prawn pond</p>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="card video-card">
+      <h3>3. Aeration System (Paddle Wheel Aerators)</h3>
+      <video controls muted playsinline class="field-video">
+        <source src="video3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="img-caption">Paddle wheel aerators running to maintain dissolved oxygen in the pond</p>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn" onclick="showPage('page1')">← Overview</button>
+      <button class="btn primary" onclick="showPage('page3')">Cultivation →</button>
+    </div>
+  </div>
+</section>
+  <!-- ========== PAGE 3 ========== -->
+  <section id="page3" class="page">
+    <div class="container">
+      <header class="page-header">
+        <h1>Page 3 – Aquaculture Cultivation Details</h1>
+        <p>Land area • Acers • Prawn types • Export quality</p>
+      </header>
+
+      <div class="card">
+        <h2>Total Cultivation of Aquaculture Land</h2>
+        
+        <ul class="info-list">
+          <li><strong>Approximate area under aquaculture:</strong> 1200 – 1600 Acers </li>
+          <li>Most farms use brackish water or blended groundwater + canal water suitable for vannamei prawns.</li>
+          <li>Ponds are typically 1 – 2 hectares each; many small and marginal farmers participate.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Average Yielding per Season</h2>
+        <ul class="info-list">
+          <li>Typical culture period: <strong>90 – 120 days</strong> per crop.</li>
+          <li>Average production: <strong> 2 - 3 tonnes per acer</strong> depending on stocking density, management, and disease control.</li>
+          <li>With good biosecurity and feed management, progressive farmers achieve higher yields.</li>
+          <li>Two crops per year are common in many coastal areas of Andhra Pradesh.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Prawn Types – Cultivation</h2>
+        <div class="two-col">
+          <div>
+            <h3>Pacific Whiteleg Shrimp<br><small>(Litopenaeus vannamei)</small></h3>
+            <ul>
+              <li>Most widely cultured species in India today</li>
+              <li>Faster growth, higher survival under good management</li>
+              <li>Preferred for export markets</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Black Tiger Prawn<br><small>(Penaeus monodon)</small></h3>
+            <ul>
+              <li>Traditional premium species</li>
+              <li>Larger size, higher market value per kg</li>
+              <li>More sensitive to disease; lower area under culture now</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Export Quality Cultivation</h2>
+        <ul class="info-list">
+          <li>Use of <strong>Specific Pathogen Free (SPF)</strong> seed from approved hatcheries.</li>
+          <li>Strict water quality monitoring (pH, salinity, dissolved oxygen, ammonia).</li>
+          <li>Proper feed management and use of probiotics.</li>
+          <li>Harvesting at the right size and rapid icing / processing to maintain quality.</li>
+          <li>Compliance with residue standards required by importing countries (USA, EU, Japan, etc.).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Other Information Related to Cultivation</h2>
+        <ul class="info-list">
+          <li>Pond preparation (drying, liming, fertilization) is essential before stocking.</li>
+          <li>Biosecurity (bird nets, crab fencing, restricted entry) reduces disease risk.</li>
+          <li>Record keeping of feed, mortality, and water parameters helps in better decision making.</li>
+          <li>Many farmers now form clusters or societies for better access to markets and technical guidance.</li>
+        </ul>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn" onclick="showPage('page2')">← Food Security</button>
+        <button class="btn primary" onclick="showPage('page4')">Diseases →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PAGE 4 ========== -->
+<section id="page4" class="page">
+  <div class="container">
+    <header class="page-header">
+      <h1>Page 4 – Diseases in Aquaculture</h1>
+      <p>Common Diseases • Symptoms • Precautions • Management</p>
+    </header>
+
+    <div class="card">
+      <h2>General Diseases in Aquaculture (Prawns)</h2>
+      <p>Disease outbreaks are one of the biggest risks in prawn farming and can cause heavy economic losses. Below are the major diseases observed in the study area.</p>
+    </div>
+
+    
+
+    <!-- 1. White Gut -->
+    <div class="card disease-card">
+      <div class="disease-content">
+        <div class="disease-text">
+          <h3>1. White Gut Disease</h3>
+          <p>White Gut is a common problem in prawn farms. The digestive tract of the prawn becomes white or empty instead of the normal brown/orange color.</p>
+          <p><strong>Symptoms:</strong></p>
+          <ul>
+            <li>White or empty gut visible through the body</li>
+            <li>Reduced feeding</li>
+            <li>Slow growth</li>
+            <li>Weakness and lethargy</li>
+          </ul>
+        </div>
+        <div class="disease-image">
+          <img src="whitegut.jpg" alt="White Gut Disease in Prawn">
+          <p class="img-caption">White Gut infected prawn</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Vibriosis -->
+    <div class="card disease-card">
+      <div class="disease-content">
+        <div class="disease-text">
+          <h3>2. Vibriosis</h3>
+          <p>Vibriosis is a bacterial disease caused by <em>Vibrio</em> species. It is one of the most common bacterial infections in prawn aquaculture.</p>
+          <p><strong>Symptoms:</strong></p>
+          <ul>
+            <li>Reddish discoloration of the body</li>
+            <li>Black spots on the shell</li>
+            <li>Loose shell</li>
+            <li>Reduced feeding and high mortality</li>
+          </ul>
+        </div>
+        <div class="disease-image">
+          <img src="vibriosis.jpg" alt="Vibriosis in Prawns">
+          <p class="img-caption">Prawns affected by Vibriosis</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Black Spot -->
+    <div class="card disease-card">
+      <div class="disease-content">
+        <div class="disease-text">
+          <h3>3. Black Spot Disease</h3>
+          <p>Black Spot disease appears as dark melanized spots on the body and shell of the prawn. It is often linked to bacterial infection or shell damage.</p>
+          <p><strong>Symptoms:</strong></p>
+          <ul>
+            <li>Black or dark spots on the body and shell</li>
+            <li>Shell damage or erosion</li>
+            <li>Reduced market value</li>
+            <li>Can lead to secondary infections</li>
+          </ul>
+        </div>
+        <div class="disease-image">
+          <img src="blackspot.jpg" alt="Black Spot Disease in Prawn">
+          <p class="img-caption">Prawn showing Black Spot symptoms</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. EHP -->
+    <div class="card disease-card">
+      <div class="disease-content">
+        <div class="disease-text">
+          <h3>4. EHP (Enterocytozoon hepatopenaei)</h3>
+          <p>EHP is a microsporidian parasite that infects the hepatopancreas of prawns. It causes severe growth retardation and size variation in the pond.</p>
+          <p><strong>Symptoms:</strong></p>
+          <ul>
+            <li>Very slow growth</li>
+            <li>Large size variation in the same pond</li>
+            <li>White/opaque hepatopancreas</li>
+            <li>Reduced feed intake</li>
+          </ul>
+        </div>
+        <div class="disease-image">
+          <img src="ehp.jpg" alt="EHP - Size variation in prawns">
+          <p class="img-caption">EHP – Size variation in one infected pond</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Explanation -->
+    <div class="card">
+      <h2>Explanation – Why Diseases Occur</h2>
+      <ul class="info-list">
+        <li>High stocking density and intensive culture increase stress.</li>
+        <li>Poor water quality (high ammonia, low oxygen, sudden salinity/pH changes).</li>
+        <li>Introduction of infected seed or contaminated water.</li>
+        <li>Inadequate biosecurity and shared equipment between ponds.</li>
+        <li>Nutritional deficiencies weakening the immune system of prawns.</li>
+      </ul>
+    </div>
+
+    <!-- Precautionary Measures -->
+    <div class="card">
+      <h2>Precautionary Measures</h2>
+      <ul class="info-list">
+        <li>Use only certified <strong>SPF (Specific Pathogen Free)</strong> seed.</li>
+        <li>Practice strict <strong>biosecurity</strong> – limit visitors, disinfect equipment, use bird nets.</li>
+        <li>Maintain optimal water quality parameters through regular testing.</li>
+        <li>Avoid overfeeding and remove uneaten feed and waste.</li>
+        <li>Use probiotics to improve water and gut health.</li>
+        <li>Keep detailed farm records for early detection of problems.</li>
+      </ul>
+    </div>
+
+    <!-- Medicine / Recovery -->
+    <div class="card">
+      <h2>Medicine / Methods Used to Recover</h2>
+      <p><strong>Important:</strong> Most viral and parasitic diseases have no direct cure. Management focuses on prevention and supportive care.</p>
+      <ul class="info-list">
+        <li><strong>Probiotics</strong> (beneficial bacteria such as Bacillus) – widely used to suppress harmful bacteria.</li>
+        <li><strong>Water exchange / dilution</strong> and improvement of aeration when parameters deteriorate.</li>
+        <li><strong>Immunostimulants</strong> and vitamin supplements in feed (as recommended by technical experts).</li>
+        <li>Antibiotic use is restricted and must follow national regulations.</li>
+        <li>Early harvesting of remaining healthy stock may be advised when an outbreak is severe.</li>
+      </ul>
+      <p class="note">Farmers should consult local fisheries officers, MPEDA / CIBA guidance, or qualified aqua-technicians before applying any treatment.</p>
+    </div>
+
+   <div class="nav-buttons">
+  <button class="btn" onclick="showPage('page3')">← Cultivation</button>
+  <button class="btn primary" onclick="showPage('page5')">About RCE →</button>
+</div>
+  </div>
+</section>
+<!-- ========== PAGE 5 ========== -->
+<section id="page5" class="page">
+  <div class="container">
+    <header class="page-header">
+      <h1>Page 5 – About Ramachandra College of Engineering</h1>
+      <p>Institution Overview • Campus • Facilities</p>
+    </header>
+
+    <!-- Campus Image -->
+    <div class="card">
+      <img src="rce-campus.jpg" alt="Ramachandra College of Engineering Campus" class="campus-image">
+      <p class="img-caption">Aerial view of Ramachandra College of Engineering Campus</p>
+    </div>
+
+    <!-- About Content -->
+    <div class="card">
+      <h2>About the Institution</h2>
+      <p>
+        At <strong>Ramachandra College of Engineering</strong>, we are committed to excellence and innovation. 
+        Established by the visionary founders of <strong>RATNAM EDUCATIONAL INSTITUTIONS</strong> of Nellore, 
+        Ramachandra College of Engineering (RCE), operating under <strong>Ganta Sriram Educational Society</strong>, 
+        is an autonomous institution offering undergraduate (B.Tech) and postgraduate (M.Tech &amp; MBA) programs.
+      </p>
+      <p>
+        RCE is now an autonomous institution, initially affiliated with <strong>JNTU Kakinada</strong>. 
+        Our state-of-the-art facilities, well-built infrastructure, and serene, lush green campus provide an ideal 
+        environment for learning, far from the hustle and bustle of the town.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Academic Excellence</h2>
+      <p>
+        RCE is a vibrant, forward-looking institution offering high-quality learning experiences in a welcoming 
+        and friendly environment. The college aims to establish academic credibility by offering dynamic 
+        undergraduate engineering programs, industry interface, research, and consultancy.
+      </p>
+      <p>
+        RCE's team of highly experienced, well-qualified, and dedicated faculty members, along with guest lectures 
+        by eminent professors and industry experts, ensures a comprehensive educational experience.
+      </p>
+      <p>
+        The college organizes periodical industrial visits and educational tours to supplement classroom lectures. 
+        RCE constantly updates its physical infrastructure and research and education facilities to maintain 
+        national prominence in providing outstanding education in computing and engineering fields.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Student Achievements &amp; Support</h2>
+      <p>
+        RCE has consistently achieved high pass percentages, with the majority of students securing distinctions. 
+        All classrooms are air-conditioned, and the campus maintains a <strong>100% ragging-free environment</strong>. 
+        The institute offers additional support to students from disadvantaged backgrounds to help them succeed academically.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Infrastructure &amp; Facilities</h2>
+      <ul class="info-list">
+        <li>Excellent infrastructure for seminars, conferences, and workshops</li>
+        <li>Regular classroom seminars, group discussions, quizzes, and mock interviews</li>
+        <li>Department association activities and professional society activities</li>
+        <li>Application and industry-oriented teaching-learning process</li>
+        <li>Focus on e-learning and online academic activities</li>
+        <li>MOUs with multinational companies like <strong>TATA</strong> and <strong>Reliance HR Solutions</strong></li>
+        <li>Technology forums and hobby clubs in each department</li>
+        <li>Departmental libraries in addition to the central library</li>
+        <li>Counseling on professional and personality development</li>
+        <li>Central seminar halls and auditoriums</li>
+        <li>More than adequate computers connected through LAN with high-speed internet</li>
+        <li>Excellent facilities for indoor and outdoor games and sports with trainers</li>
+      </ul>
+    </div>
+
+   <!-- <div class="nav-buttons">
+  <button class="btn" onclick="showPage('page3')">← Page 3</button>
+  <button class="btn primary" onclick="showPage('page5')">Page 5 →</button>
+</div> -->
+  </div>
+</section>
+
+  <footer id="main-footer" class="hidden">
+    <p>Community Service Project – Department of CSE | Academic Year 2025-26</p>
+    <p>Disease Detection  System For Aquaculture </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
